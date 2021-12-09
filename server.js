@@ -10,7 +10,11 @@ const app = express();
 
 
 // Connect DB
-mongoose.connect('mongodb+srv://sean:1234@cluster0.coirx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority')
+mongoose.connect('mongodb+srv://sean:1234@cluster0.coirx.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
 .then(console.log('MongoDB connectd'))
 .catch((err) => console.log(err));
 
