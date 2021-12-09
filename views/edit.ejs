@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit Vaccine Apply Form</h1>
+    <form action="/blogs/<%= blog.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+        <input type="text" name="vaccine" placeholder="Vaccine" value="<%= blog.vaccine %>">
+        <input type="text" name="user" placeholder="User" value="<%= blog.user %>">
+        <input type="text" name="hospital" placeholder="Hospital" value="<%= blog.hospital %>">
+        <input type="text" name="feeling" placeholder="Feeling" value="<%= blog.feeling %>">
+        <input type="file" name="image" value="<%= blog.img %>">
+        <div>
+            <button type="submit">Edit</button>
+        </div>
+    </form>
+</body>
+</html>
